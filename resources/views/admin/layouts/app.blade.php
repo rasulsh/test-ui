@@ -12,7 +12,7 @@
     
     <style>
         body {
-            font-family: 'Vazir', 'Tahoma', 'Segoe UI', Geneva, Verdana, sans-serif;
+            font-family: 'Tahoma', 'Segoe UI', Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
             direction: rtl;
         }
@@ -92,7 +92,7 @@
         }
         
         .submenu.show {
-            max-height: 1000px;
+            max-height: 2000px;
         }
         
         .submenu .nav-link {
@@ -220,7 +220,7 @@
                     </a>
                     
                     <!-- Catalog with 2 levels -->
-                    <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'catalogMenu')">
+                    <a class="nav-link" href="#" data-toggle-submenu="catalogMenu">
                         <span><i class="bi bi-folder"></i> کاتالوگ</span>
                         <i class="bi bi-chevron-down"></i>
                     </a>
@@ -230,7 +230,7 @@
                         </a>
                         
                         <!-- Products with 3rd level -->
-                        <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'productsMenu')">
+                        <a class="nav-link" href="#" data-toggle-submenu="productsMenu">
                             <span><i class="bi bi-box"></i> محصولات</span>
                             <i class="bi bi-chevron-down"></i>
                         </a>
@@ -255,7 +255,7 @@
                     </div>
                     
                     <!-- Sales with 2 levels -->
-                    <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'salesMenu')">
+                    <a class="nav-link" href="#" data-toggle-submenu="salesMenu">
                         <span><i class="bi bi-cart"></i> فروش</span>
                         <i class="bi bi-chevron-down"></i>
                     </a>
@@ -265,7 +265,7 @@
                         </a>
                         
                         <!-- Invoices with 3rd level -->
-                        <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'invoicesMenu')">
+                        <a class="nav-link" href="#" data-toggle-submenu="invoicesMenu">
                             <span><i class="bi bi-file-text"></i> فاکتورها</span>
                             <i class="bi bi-chevron-down"></i>
                         </a>
@@ -303,7 +303,7 @@
                     </a>
                     
                     <!-- System with 2 levels -->
-                    <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'systemMenu')">
+                    <a class="nav-link" href="#" data-toggle-submenu="systemMenu">
                         <span><i class="bi bi-gear"></i> سیستم</span>
                         <i class="bi bi-chevron-down"></i>
                     </a>
@@ -313,7 +313,7 @@
                         </a>
                         
                         <!-- Settings with 3rd level -->
-                        <a class="nav-link" href="#" onclick="toggleSubmenu(event, 'settingsMenu')">
+                        <a class="nav-link" href="#" data-toggle-submenu="settingsMenu">
                             <span><i class="bi bi-sliders"></i> پیکربندی</span>
                             <i class="bi bi-chevron-down"></i>
                         </a>
@@ -357,19 +357,27 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     
     <script>
-        function toggleSubmenu(event, menuId) {
-            event.preventDefault();
-            event.stopPropagation();
-            
-            const submenu = document.getElementById(menuId);
-            const link = event.currentTarget;
-            
-            // Toggle the submenu
-            submenu.classList.toggle('show');
-            
-            // Toggle the expanded class on the link for chevron rotation
-            link.classList.toggle('expanded');
-        }
+        // Use event delegation for menu toggling
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.admin-sidebar').addEventListener('click', function(event) {
+                const link = event.target.closest('[data-toggle-submenu]');
+                if (link) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    
+                    const menuId = link.getAttribute('data-toggle-submenu');
+                    const submenu = document.getElementById(menuId);
+                    
+                    if (submenu) {
+                        // Toggle the submenu
+                        submenu.classList.toggle('show');
+                        
+                        // Toggle the expanded class on the link for chevron rotation
+                        link.classList.toggle('expanded');
+                    }
+                }
+            });
+        });
     </script>
     
     @yield('scripts')
