@@ -40,6 +40,15 @@ function renderView($layoutPath, $viewPath) {
     // Replace {{ date('Y') }} with actual year
     $output = str_replace("{{ date('Y') }}", date('Y'), $output);
     
+    // Replace {{ asset(...) }} with actual paths
+    $output = preg_replace_callback(
+        "/\{\{\s*asset\(['\"]([^'\"]+)['\"]\)\s*\}\}/",
+        function($matches) {
+            return '/' . ltrim($matches[1], '/');
+        },
+        $output
+    );
+    
     return $output;
 }
 

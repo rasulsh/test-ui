@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-class DashboardController
+use Illuminate\Routing\Controller;
+
+class DashboardController extends Controller
 {
     /**
      * Display the admin dashboard.

@@ -6,9 +6,9 @@
     <title>@yield('title', 'Admin Panel') - Dashboard</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-icons.min.css') }}">
     
     <style>
         body {
@@ -195,7 +195,7 @@
     </footer>
 
     <!-- Bootstrap 5 JS Bundle -->
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     
     @yield('scripts')
 </body>
