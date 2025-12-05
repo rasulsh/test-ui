@@ -1,22 +1,22 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', 'داشبورد')
 
 @section('content')
 <div class="container-fluid">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><i class="bi bi-house-door"></i> Dashboard</li>
+            <li class="breadcrumb-item active"><i class="bi bi-house-door"></i> داشبورد</li>
         </ol>
     </nav>
 
     <!-- Page Title -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="h3 mb-0"><i class="bi bi-speedometer2"></i> Dashboard</h1>
+        <h1 class="h3 mb-0"><i class="bi bi-speedometer2"></i> داشبورد</h1>
         <div>
             <button class="btn btn-primary">
-                <i class="bi bi-download"></i> Export
+                <i class="bi bi-download"></i> خروجی
             </button>
         </div>
     </div>
@@ -29,9 +29,9 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="text-uppercase text-muted mb-1" style="font-size: 0.85rem; font-weight: 600;">
-                                Total Sales
+                                کل فروش
                             </div>
-                            <div class="h4 mb-0 font-weight-bold">$45,231</div>
+                            <div class="h4 mb-0 font-weight-bold">۴۵,۲۳۱ تومان</div>
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-currency-dollar stat-icon text-primary"></i>
@@ -47,9 +47,9 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="text-uppercase text-muted mb-1" style="font-size: 0.85rem; font-weight: 600;">
-                                Orders
+                                سفارشات
                             </div>
-                            <div class="h4 mb-0 font-weight-bold">1,258</div>
+                            <div class="h4 mb-0 font-weight-bold">۱,۲۵۸</div>
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-cart-check stat-icon text-success"></i>
@@ -65,9 +65,9 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="text-uppercase text-muted mb-1" style="font-size: 0.85rem; font-weight: 600;">
-                                Customers
+                                مشتریان
                             </div>
-                            <div class="h4 mb-0 font-weight-bold">3,567</div>
+                            <div class="h4 mb-0 font-weight-bold">۳,۵۶۷</div>
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-people stat-icon text-info"></i>
@@ -83,9 +83,9 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="text-uppercase text-muted mb-1" style="font-size: 0.85rem; font-weight: 600;">
-                                Products
+                                محصولات
                             </div>
-                            <div class="h4 mb-0 font-weight-bold">892</div>
+                            <div class="h4 mb-0 font-weight-bold">۸۹۲</div>
                         </div>
                         <div class="col-auto">
                             <i class="bi bi-box-seam stat-icon text-warning"></i>
@@ -102,55 +102,55 @@
         <div class="col-lg-8 mb-4">
             <div class="card dashboard-card">
                 <div class="card-header bg-white border-0 py-3">
-                    <h5 class="mb-0"><i class="bi bi-list-ul"></i> Recent Orders</h5>
+                    <h5 class="mb-0"><i class="bi bi-list-ul"></i> سفارشات اخیر</h5>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Order ID</th>
-                                    <th>Customer</th>
-                                    <th>Product</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
+                                    <th>شناسه سفارش</th>
+                                    <th>مشتری</th>
+                                    <th>محصول</th>
+                                    <th>مبلغ</th>
+                                    <th>وضعیت</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#1234</td>
-                                    <td>John Doe</td>
-                                    <td>Product A</td>
-                                    <td>$120.00</td>
-                                    <td><span class="badge bg-success">Completed</span></td>
+                                    <td>#۱۲۳۴</td>
+                                    <td>علی احمدی</td>
+                                    <td>محصول الف</td>
+                                    <td>۱۲۰,۰۰۰ تومان</td>
+                                    <td><span class="badge bg-success">تکمیل شده</span></td>
                                 </tr>
                                 <tr>
-                                    <td>#1235</td>
-                                    <td>Jane Smith</td>
-                                    <td>Product B</td>
-                                    <td>$85.00</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
+                                    <td>#۱۲۳۵</td>
+                                    <td>مریم محمدی</td>
+                                    <td>محصول ب</td>
+                                    <td>۸۵,۰۰۰ تومان</td>
+                                    <td><span class="badge bg-warning">در انتظار</span></td>
                                 </tr>
                                 <tr>
-                                    <td>#1236</td>
-                                    <td>Bob Johnson</td>
-                                    <td>Product C</td>
-                                    <td>$200.00</td>
-                                    <td><span class="badge bg-success">Completed</span></td>
+                                    <td>#۱۲۳۶</td>
+                                    <td>رضا کریمی</td>
+                                    <td>محصول ج</td>
+                                    <td>۲۰۰,۰۰۰ تومان</td>
+                                    <td><span class="badge bg-success">تکمیل شده</span></td>
                                 </tr>
                                 <tr>
-                                    <td>#1237</td>
-                                    <td>Alice Brown</td>
-                                    <td>Product D</td>
-                                    <td>$150.00</td>
-                                    <td><span class="badge bg-info">Processing</span></td>
+                                    <td>#۱۲۳۷</td>
+                                    <td>فاطمه حسینی</td>
+                                    <td>محصول د</td>
+                                    <td>۱۵۰,۰۰۰ تومان</td>
+                                    <td><span class="badge bg-info">در حال پردازش</span></td>
                                 </tr>
                                 <tr>
-                                    <td>#1238</td>
-                                    <td>Charlie Davis</td>
-                                    <td>Product E</td>
-                                    <td>$95.00</td>
-                                    <td><span class="badge bg-danger">Cancelled</span></td>
+                                    <td>#۱۲۳۸</td>
+                                    <td>حسن رضایی</td>
+                                    <td>محصول ه</td>
+                                    <td>۹۵,۰۰۰ تومان</td>
+                                    <td><span class="badge bg-danger">لغو شده</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -163,13 +163,13 @@
         <div class="col-lg-4 mb-4">
             <div class="card dashboard-card">
                 <div class="card-header bg-white border-0 py-3">
-                    <h5 class="mb-0"><i class="bi bi-graph-up"></i> Quick Stats</h5>
+                    <h5 class="mb-0"><i class="bi bi-graph-up"></i> آمار سریع</h5>
                 </div>
                 <div class="card-body">
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
-                            <span>Sales Target</span>
-                            <span class="text-muted">75%</span>
+                            <span>هدف فروش</span>
+                            <span class="text-muted">۷۵٪</span>
                         </div>
                         <div class="progress" style="height: 8px;">
                             <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
@@ -178,8 +178,8 @@
                     
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
-                            <span>Customer Satisfaction</span>
-                            <span class="text-muted">92%</span>
+                            <span>رضایت مشتری</span>
+                            <span class="text-muted">۹۲٪</span>
                         </div>
                         <div class="progress" style="height: 8px;">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 92%"></div>
@@ -188,8 +188,8 @@
                     
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
-                            <span>Order Fulfillment</span>
-                            <span class="text-muted">88%</span>
+                            <span>تکمیل سفارش</span>
+                            <span class="text-muted">۸۸٪</span>
                         </div>
                         <div class="progress" style="height: 8px;">
                             <div class="progress-bar bg-info" role="progressbar" style="width: 88%"></div>
@@ -198,8 +198,8 @@
                     
                     <div class="mb-0">
                         <div class="d-flex justify-content-between mb-2">
-                            <span>Product Returns</span>
-                            <span class="text-muted">12%</span>
+                            <span>مرجوعی محصول</span>
+                            <span class="text-muted">۱۲٪</span>
                         </div>
                         <div class="progress" style="height: 8px;">
                             <div class="progress-bar bg-warning" role="progressbar" style="width: 12%"></div>
@@ -215,7 +215,7 @@
         <div class="col-lg-6 mb-4">
             <div class="card dashboard-card">
                 <div class="card-header bg-white border-0 py-3">
-                    <h5 class="mb-0"><i class="bi bi-activity"></i> Recent Activity</h5>
+                    <h5 class="mb-0"><i class="bi bi-activity"></i> فعالیت‌های اخیر</h5>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mb-0">
@@ -225,9 +225,9 @@
                                     <i class="bi bi-cart-plus text-success fs-5"></i>
                                 </div>
                                 <div>
-                                    <strong>New order received</strong>
-                                    <p class="text-muted mb-0 small">Order #1238 from Charlie Davis</p>
-                                    <small class="text-muted">5 minutes ago</small>
+                                    <strong>سفارش جدید دریافت شد</strong>
+                                    <p class="text-muted mb-0 small">سفارش #۱۲۳۸ از حسن رضایی</p>
+                                    <small class="text-muted">۵ دقیقه پیش</small>
                                 </div>
                             </div>
                         </li>
@@ -237,9 +237,9 @@
                                     <i class="bi bi-person-plus text-info fs-5"></i>
                                 </div>
                                 <div>
-                                    <strong>New customer registered</strong>
-                                    <p class="text-muted mb-0 small">Emma Wilson joined</p>
-                                    <small class="text-muted">1 hour ago</small>
+                                    <strong>مشتری جدید ثبت‌نام کرد</strong>
+                                    <p class="text-muted mb-0 small">زهرا محمدی عضو شد</p>
+                                    <small class="text-muted">۱ ساعت پیش</small>
                                 </div>
                             </div>
                         </li>
@@ -249,9 +249,9 @@
                                     <i class="bi bi-box-seam text-warning fs-5"></i>
                                 </div>
                                 <div>
-                                    <strong>Product stock low</strong>
-                                    <p class="text-muted mb-0 small">Product A needs restock</p>
-                                    <small class="text-muted">2 hours ago</small>
+                                    <strong>موجودی محصول کم است</strong>
+                                    <p class="text-muted mb-0 small">محصول الف نیاز به تامین مجدد دارد</p>
+                                    <small class="text-muted">۲ ساعت پیش</small>
                                 </div>
                             </div>
                         </li>
@@ -263,34 +263,34 @@
         <div class="col-lg-6 mb-4">
             <div class="card dashboard-card">
                 <div class="card-header bg-white border-0 py-3">
-                    <h5 class="mb-0"><i class="bi bi-star"></i> Top Products</h5>
+                    <h5 class="mb-0"><i class="bi bi-star"></i> محصولات برتر</h5>
                 </div>
                 <div class="card-body">
                     <div class="mb-3 pb-3 border-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <strong>Product A</strong>
-                                <p class="text-muted mb-0 small">Category: Electronics</p>
+                                <strong>محصول الف</strong>
+                                <p class="text-muted mb-0 small">دسته‌بندی: الکترونیک</p>
                             </div>
-                            <span class="badge bg-primary rounded-pill">245 sold</span>
+                            <span class="badge bg-primary rounded-pill">۲۴۵ فروش</span>
                         </div>
                     </div>
                     <div class="mb-3 pb-3 border-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <strong>Product B</strong>
-                                <p class="text-muted mb-0 small">Category: Clothing</p>
+                                <strong>محصول ب</strong>
+                                <p class="text-muted mb-0 small">دسته‌بندی: پوشاک</p>
                             </div>
-                            <span class="badge bg-primary rounded-pill">198 sold</span>
+                            <span class="badge bg-primary rounded-pill">۱۹۸ فروش</span>
                         </div>
                     </div>
                     <div class="mb-0">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <strong>Product C</strong>
-                                <p class="text-muted mb-0 small">Category: Home & Garden</p>
+                                <strong>محصول ج</strong>
+                                <p class="text-muted mb-0 small">دسته‌بندی: خانه و باغ</p>
                             </div>
-                            <span class="badge bg-primary rounded-pill">167 sold</span>
+                            <span class="badge bg-primary rounded-pill">۱۶۷ فروش</span>
                         </div>
                     </div>
                 </div>
